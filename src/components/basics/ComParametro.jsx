@@ -7,6 +7,7 @@ export default function ComParametro(params) {
         <div>
             <h2>{titulo}</h2>
             <h3>{subtitulo}</h3>
+            <h3>{params.nota}</h3>
         </div>
     )
 }
