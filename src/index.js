@@ -1,17 +1,54 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/basics/App';
+import ComParametro from './components/basics/ComParametro';
+import Fragmento from './components/basics/Fragmento';
+import NavBar from './components/basics/NavBar/NavBar';
+// import Footer from './components/basics/Footer/Footer';
+import Card from './components/basics/layout/Card/Card';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const card = document.getElementById('card');
+const header = document.getElementById('header');
+// const footer = document.getElementById('footer');
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <NavBar></NavBar>,
+  header
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+ReactDOM.render(
+  <App titulo="Card">
+    <div className="Cards">
+      <Card title="Card 01" content="Conteudo do primeiro card.">
+        <ComParametro
+          titulo="Primeiro Componente"
+          subtitulo="Componente filho aqui."
+        />
+      </Card>
+      <Card title="Card 01" content="Conteudo do primeiro card.">
+        <ComParametro
+          titulo="Segundo Componente"
+          subtitulo="Componente filho aqui."
+        />
+      </Card>
+      <Card title="Card 01" content="Conteudo do primeiro card.">
+        <ComParametro
+          titulo="Terceiro Componente"
+          subtitulo="Componente filho aqui."
+        />
+      </Card>
+      <Card title="Card 01" content="Conteudo do primeiro card.">
+        <Fragmento></Fragmento>
+      </Card>
+    </div>
+  </App>,
+  card
+);
+// ReactDOM.render(
+//   <Footer></Footer>,
+//   footer
+// );
+
 reportWebVitals();

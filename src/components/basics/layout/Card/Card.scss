@@ -1,0 +1,49 @@
+.Card {
+    background-color: #8b008b;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+
+    .border-gradient {
+        border: 10px solid;
+        border-image-slice: 1;
+        border-width: 5px;
+      }
+
+    .border-gradient-purple {
+        border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+    }
+    
+    .border-gradient-green {
+        border-image-source: linear-gradient(to left, #00C853, #B2FF59);
+    }
+
+    .Title {
+        padding: 5px 0px;
+        display: flex;
+        justify-content: center;
+    }
+    .Content {
+        text-decoration: inherit;
+        font-family: Oswald;
+        font-size: 1rem;
+        background-color: #222;
+        color: white;
+        padding: 20px;
+    }
+}
+
+.Card:hover,
+.Card:focus,
+.Card:active {
+  transform: translateY(-8px);
+}
