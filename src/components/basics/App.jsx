@@ -1,6 +1,5 @@
 import React from 'react'
 import "../../App.css"
-// import default style
 
 export default function App(params) {
     return (

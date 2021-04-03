@@ -14,6 +14,11 @@ const header = document.getElementById('header');
 // const footer = document.getElementById('footer');
 
 ReactDOM.render(
+  <NavBar></NavBar>,
+  header
+);
+
+ReactDOM.render(
   <App titulo="Card">
     <div className="Cards">
       <Card title="Card 01" content="Conteudo do primeiro card.">
@@ -40,10 +45,6 @@ ReactDOM.render(
     </div>
   </App>,
   card
-);
-ReactDOM.render(
-  <NavBar></NavBar>,
-  header
 );
 // ReactDOM.render(
 //   <Footer></Footer>,
